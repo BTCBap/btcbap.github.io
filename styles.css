@@ -3,6 +3,29 @@
 /* Define custom fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* Define color variables */
+:root {
+  --main-bg-color-light: #fff;
+  --main-bg-color-dark: #333;
+  --text-color-light: #333;
+  --text-color-dark: #fff;
+  --button-bg-color-light: #fff;
+  --button-bg-color-dark: #333;
+  --button-text-color-light: #333;
+  --button-text-color-dark: #fff;
+  --sidebar-bg-color: rgba(0, 0, 0, 0.8);
+  --sidebar-text-color: #fff;
+  --sidebar-hover-bg-color: #FF6347;
+  --sidebar-hover-text-color: #000;
+  --menu-btn-color: #333;
+  --menu-btn-hover-color: #FF6347;
+  --back-btn-color: #333;
+  --back-btn-hover-color: #FF6347;
+  --back-btn-color-dark: wheat;
+  --hover-color-light: #FF6347;
+  --hover-color-dark: wheat;
+}
+
 body {
     font-family: 'Roboto', sans-serif; /* Use custom font for all text */
     text-align: center; /* Center-align all content */
@@ -97,13 +120,21 @@ nav ul li a:hover {
     outline: none;
 }
 
+.menu-btn:hover .icon {
+    color: #FF6347;
+}
+
+.dark-mode .menu-btn:hover .icon {
+    color: wheat;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
     right: -250px;
     width: 250px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: #333;
     z-index: 999;
     transition: .8s;
     padding-top: 60px;
@@ -188,10 +219,42 @@ nav ul li a:hover {
     outline: none;
 }
 
-.toggle-btn:hover {
-    opacity: 0.7;
+.toggle-btn:hover .icon .fa-sun:before {
+    color: var(--hover-color-light);
+}
+
+.dark-mode .toggle-btn:hover .icon .fa-sun:before {
+    color: var(--hover-color-dark);
 }
 
 #toggleIcon {
     transition: transform 0.3s ease;
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  outline: none;
+}
+
+.back-btn .icon {
+  color: #333; /* Adjust color as needed */
+}
+
+.back-btn:hover .icon {
+  color: #FF6347; /* Adjust hover color as needed */
+}
+
+.dark-mode .back-btn .icon {
+  color: #fff; /* White color in dark mode */
+}
+
+.dark-mode .back-btn:hover .icon {
+  color: wheat; /* Wheat color in dark mode */
 }

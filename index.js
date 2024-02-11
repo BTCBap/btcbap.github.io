@@ -32,3 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+// JavaScript code for back button
+document.addEventListener('DOMContentLoaded', function () {
+    const backBtn = document.getElementById('backBtn');
+    
+    backBtn.addEventListener('click', function () {
+        window.history.back(); // Go back to the previous page
+    });
+});
