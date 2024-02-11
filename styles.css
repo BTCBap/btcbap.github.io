@@ -7,11 +7,12 @@ body {
     font-family: 'Roboto', sans-serif; /* Use custom font for all text */
     text-align: center; /* Center-align all content */
     color: #333; /* Dark text color */
-    height: 100vh;
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: center; /* Align child elements vertically */
+    align-items: center; /* Align child elements horizontally */
+    min-height: 100vh; /* Ensure full viewport height */
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .container {
@@ -84,6 +85,57 @@ nav ul li a:hover {
     left: 20px; /* Adjust the position to the bottom left */
 }
 
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    outline: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    transition: .8s;
+    padding-top: 60px;
+    border-top-left-radius: 20px; /* Add rounded corners to top left */
+    border-bottom-left-radius: 20px; /* Add rounded corners to bottom left */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.sidebar ul li a:hover {
+    color: wheat; /* Change text color on hover */
+    background: none; /* Remove background color on hover */
+}
+
+.show-sidebar {
+    right: 0;
+    transition: .8s;
+}
+
 .toggle-btn {
     background-color: transparent;
     border: none;
@@ -92,13 +144,6 @@ nav ul li a:hover {
     outline: none;
 }
 
-.toggle-btn:hover {
-    opacity: 0.7;
-}
-
-#toggleIcon {
-    transition: transform 0.3s ease;
-}
 
 .dark-mode #toggleIcon {
   color: wheat;
@@ -133,4 +178,20 @@ nav ul li a:hover {
 .dark-mode header h1,
 .dark-mode .tagline {
     color: #f5deb3; /* White text color for title and tagline in dark mode */
+}
+
+.toggle-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    outline: none;
+}
+
+.toggle-btn:hover {
+    opacity: 0.7;
+}
+
+#toggleIcon {
+    transition: transform 0.3s ease;
 }
