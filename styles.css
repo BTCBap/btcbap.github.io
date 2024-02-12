@@ -24,6 +24,8 @@
     --back-btn-color-dark: wheat;
     --hover-color-light: #FF6347;
     --hover-color-dark: wheat;
+    --progress-color-light: #FF6347;
+    --progress-color-dark: wheat;
 }
 
 body {

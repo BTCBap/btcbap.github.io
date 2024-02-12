@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
             playButton.innerHTML = '<i class="fas fa-stop"></i>'; // Change to stop button icon
         } else {
             audioPlayer.pause();
-            audioPlayer.currentTime = 0; // Reset audio to the beginning
             playButton.innerHTML = '<i class="fas fa-play"></i>'; // Change back to play button icon
         }
     });
