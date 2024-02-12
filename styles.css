@@ -5,75 +5,119 @@
 
 /* Define color variables */
 :root {
-  --main-bg-color-light: #fff;
-  --main-bg-color-dark: #333;
-  --text-color-light: #333;
-  --text-color-dark: #fff;
-  --button-bg-color-light: #fff;
-  --button-bg-color-dark: #333;
-  --button-text-color-light: #333;
-  --button-text-color-dark: #fff;
-  --sidebar-bg-color: rgba(0, 0, 0, 0.8);
-  --sidebar-text-color: #fff;
-  --sidebar-hover-bg-color: #FF6347;
-  --sidebar-hover-text-color: #000;
-  --menu-btn-color: #333;
-  --menu-btn-hover-color: #FF6347;
-  --back-btn-color: #333;
-  --back-btn-hover-color: #FF6347;
-  --back-btn-color-dark: wheat;
-  --hover-color-light: #FF6347;
-  --hover-color-dark: wheat;
+    --main-bg-color-light: #fff;
+    --main-bg-color-dark: #333;
+    --text-color-light: #333;
+    --text-color-dark: #fff;
+    --button-bg-color-light: #fff;
+    --button-bg-color-dark: #333;
+    --button-text-color-light: #333;
+    --button-text-color-dark: #fff;
+    --sidebar-bg-color: rgba(0, 0, 0, 0.8);
+    --sidebar-text-color: #fff;
+    --sidebar-hover-bg-color: #FF6347;
+    --sidebar-hover-text-color: #000;
+    --menu-btn-color: #333;
+    --menu-btn-hover-color: #FF6347;
+    --back-btn-color: #333;
+    --back-btn-hover-color: #FF6347;
+    --back-btn-color-dark: wheat;
+    --hover-color-light: #FF6347;
+    --hover-color-dark: wheat;
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Use custom font for all text */
-    text-align: center; /* Center-align all content */
-    color: #333; /* Dark text color */
-    display: flex; /* Use flexbox layout */
-    flex-direction: column; /* Stack child elements vertically */
-    justify-content: center; /* Align child elements vertically */
-    align-items: center; /* Align child elements horizontally */
-    min-height: 100vh; /* Ensure full viewport height */
+    font-family: 'Roboto', sans-serif;
+    /* Use custom font for all text */
+    text-align: center;
+    /* Center-align all content */
+    color: #333;
+    /* Dark text color */
+    display: flex;
+    /* Use flexbox layout */
+    flex-direction: column;
+    /* Stack child elements vertically */
+    justify-content: center;
+    /* Align child elements vertically */
+    align-items: center;
+    /* Align child elements horizontally */
+    min-height: 100vh;
+    /* Ensure full viewport height */
     margin: 0;
 }
 
 .container {
-    background-color: #fff; /* White background in light mode */
+    background-color: #fff;
+    /* White background in light mode */
     border-radius: 20px;
     padding: 20px;
     width: 80%;
-    max-width: 600px; /* Adjust as needed */
+    max-width: 600px;
+    /* Adjust as needed */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
+.image-container {
+    text-align: center;
+}
+
+.centered-image {
+    max-width: 80%;
+    /* Adjust as needed */
+    max-height: 70vh;
+    /* Adjust as needed */
+    border-radius: 20px;
+    /* Add rounded corners */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    /* Add shadow for depth */
+    backdrop-filter: blur(10px);
+    /* Apply blur effect for glassmorphic style */
+}
+
 header h1 {
-    font-family: 'Roboto', sans-serif; /* Use custom font for BTCBap title */
+    font-family: 'Roboto', sans-serif;
+    /* Use custom font for BTCBap title */
     font-size: 32px;
     margin-bottom: 20px;
-    color: #333; /* Dark text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow with offset for neubrutal style */
+    color: #333;
+    /* Dark text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Shadow with offset for neubrutal style */
 }
 
 header img {
     display: block;
-    margin: 0 auto 20px; /* Center the image and add space at the bottom */
-    border-radius: 50%; /* Make the image round */
-    max-width: 150px; /* Adjust as needed */
-    border: 4px solid #fff; /* Add a white border */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Add shadow for neubrutal style */
-    transition: transform 0.3s ease; /* Add transition effect */
+    margin: 0 auto 20px;
+    /* Center the image and add space at the bottom */
+    border-radius: 50%;
+    /* Make the image round */
+    max-width: 150px;
+    /* Adjust as needed */
+    border: 2px solid #333;
+    /* Set border color to wheat */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    /* Add shadow for neubrutal style */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    /* Add transition effect for transform and border color */
 }
 
+.dark-mode header img {
+    border-color: #f5deb3;
+    /* Set border color to wheat in dark mode */
+}
+
+
 header img:hover {
-    transform: scale(1.1); /* Scale up the image on hover */
+    transform: scale(1.1);
+    /* Scale up the image on hover */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Center the navigation links */
+    text-align: center;
+    /* Center the navigation links */
 }
 
 nav ul li {
@@ -83,29 +127,40 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333; /* Dark text color by default */
-    padding: 12px 24px; /* Larger padding for buttons */
+    color: #333;
+    /* Dark text color by default */
+    padding: 12px 24px;
+    /* Larger padding for buttons */
     border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow with offset */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
-    background-color: #fff; /* White background for buttons */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Shadow with offset */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition for background color and text color */
+    background-color: #fff;
+    /* White background for buttons */
 }
 
 nav ul li a:hover {
-    background-color: #FF6347; /* Darker orange background on hover */
+    background-color: #FF6347;
+    /* Darker orange background on hover */
 }
 
 .tagline {
-    font-family: 'Roboto', sans-serif; /* Use custom font for tagline */
-    font-size: 18px; /* Adjust as needed */
-    color: #333; /* Dark text color */
-    margin-bottom: 40px; /* Increase margin-bottom for more padding */
+    font-family: 'Roboto', sans-serif;
+    /* Use custom font for tagline */
+    font-size: 18px;
+    /* Adjust as needed */
+    color: #333;
+    /* Dark text color */
+    margin-bottom: 40px;
+    /* Increase margin-bottom for more padding */
 }
 
 .dark-light-toggle {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Adjust the position to the bottom left */
+    left: 20px;
+    /* Adjust the position to the bottom left */
 }
 
 .menu-btn {
@@ -134,12 +189,24 @@ nav ul li a:hover {
     right: -250px;
     width: 250px;
     height: 100%;
-    background: #333;
+    background: rgba(255, 255, 255, 0.9);
+    /* Light mode sidebar background with glassmorphic style */
     z-index: 999;
-    transition: .8s;
+    transition: .3s ease-in-out;
     padding-top: 60px;
-    border-top-left-radius: 20px; /* Add rounded corners to top left */
-    border-bottom-left-radius: 20px; /* Add rounded corners to bottom left */
+    border-top-left-radius: 20px;
+    /* Add rounded corners to top left */
+    border-bottom-left-radius: 20px;
+    /* Add rounded corners to bottom left */
+    backdrop-filter: blur(5px);
+    /* Apply blur effect for glassmorphic style */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Add shadow for depth */
+}
+
+.sidebar:hover {
+    background: rgba(255, 255, 255, 0.95);
+    /* Lighter background color on hover for glassmorphic effect */
 }
 
 .sidebar ul {
@@ -153,13 +220,30 @@ nav ul li a:hover {
 
 .sidebar ul li a {
     text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease; /* Smooth transition for text color */
+    color: var(--text-color-light);
+    /* Orange text color for links in light mode */
+    transition: color 0.3s ease;
+    /* Smooth transition for text color */
 }
 
 .sidebar ul li a:hover {
-    color: wheat; /* Change text color on hover */
-    background: none; /* Remove background color on hover */
+    color: var(--hover-color-light);
+    /* Brighter orange color when hovered in light mode */
+}
+
+.dark-mode .sidebar {
+    background: linear-gradient(135deg, #333, #111);
+    /* Dark mode sidebar background color */
+}
+
+.dark-mode .sidebar ul li a {
+    color: #fff;
+    /* White text color for links in dark mode */
+}
+
+.dark-mode .sidebar ul li a:hover {
+    color: wheat;
+    /* Wheat color when hovered in dark mode */
 }
 
 .show-sidebar {
@@ -177,38 +261,49 @@ nav ul li a:hover {
 
 
 .dark-mode #toggleIcon {
-  color: wheat;
+    color: wheat;
 }
 
 .dark-mode {
-    background: linear-gradient(135deg, #333, #111); /* Dark mode background gradient */
-    color: #fff; /* Light text color */
+    background: linear-gradient(135deg, #333, #111);
+    /* Dark mode background gradient */
+    color: #fff;
+    /* Light text color */
 }
 
 .dark-mode .container {
-    background: linear-gradient(135deg, #333, #111); /* Dark mode background gradient */
+    background: linear-gradient(135deg, #333, #111);
+    /* Dark mode background gradient */
     border-radius: 20px;
     padding: 20px;
     width: 80%;
-    max-width: 600px; /* Adjust as needed */
+    max-width: 600px;
+    /* Adjust as needed */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .dark-mode nav ul li a {
-    color: #fff; /* White text color for buttons in dark mode */
-    background-color: #333; /* Dark background for buttons in dark mode */
-    box-shadow: none; /* Remove shadow from buttons in dark mode */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+    color: #fff;
+    /* White text color for buttons in dark mode */
+    background-color: #333;
+    /* Dark background for buttons in dark mode */
+    box-shadow: none;
+    /* Remove shadow from buttons in dark mode */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition for background color and text color */
 }
 
 .dark-mode nav ul li a:hover {
-    background-color: #f5deb3; /* Neon green background on hover in dark mode */
-    color: black; /* White text color on hover in dark mode */
+    background-color: #f5deb3;
+    /* Neon green background on hover in dark mode */
+    color: black;
+    /* White text color on hover in dark mode */
 }
 
 .dark-mode header h1,
 .dark-mode .tagline {
-    color: #f5deb3; /* White text color for title and tagline in dark mode */
+    color: #f5deb3;
+    /* White text color for title and tagline in dark mode */
 }
 
 .toggle-btn {
@@ -232,29 +327,63 @@ nav ul li a:hover {
 }
 
 .back-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 9999;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  outline: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    outline: none;
 }
 
 .back-btn .icon {
-  color: #333; /* Adjust color as needed */
+    color: #333;
+    /* Adjust color as needed */
 }
 
 .back-btn:hover .icon {
-  color: #FF6347; /* Adjust hover color as needed */
+    color: #FF6347;
+    /* Adjust hover color as needed */
 }
 
 .dark-mode .back-btn .icon {
-  color: #fff; /* White color in dark mode */
+    color: #fff;
+    /* White color in dark mode */
 }
 
 .dark-mode .back-btn:hover .icon {
-  color: wheat; /* Wheat color in dark mode */
+    color: wheat;
+    /* Wheat color in dark mode */
+}
+
+.play-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    outline: none;
+    color: #333;
+    /* Dark text color */
+}
+
+/* Style for the play button icon on hover */
+.play-button:hover i {
+    color: #FF6347;
+    /* Adjust hover color as needed */
+}
+
+.dark-mode .play-button {
+    color: #fff;
+    /* White color in dark mode */
+}
+
+.dark-mode .play-button:hover i {
+    color: wheat;
+    /* Wheat color in dark mode */
 }
