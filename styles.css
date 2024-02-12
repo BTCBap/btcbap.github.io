@@ -389,3 +389,21 @@ nav ul li a:hover {
     color: wheat;
     /* Wheat color in dark mode */
 }
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        max-width: none;
+    }
+
+    header h1 {
+        font-size: 24px;
+        /* Decrease font size for smaller screens */
+    }
+
+    nav ul li {
+        margin: 5px 0;
+        /* Adjust margins for navigation links */
+    }
+}
