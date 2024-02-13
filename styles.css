@@ -57,6 +57,8 @@ body {
     max-width: 600px;
     /* Adjust as needed */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 0 auto;
 }
 
 .image-container {
@@ -406,4 +408,38 @@ nav ul li a:hover {
         margin: 5px 0;
         /* Adjust margins for navigation links */
     }
+
 }
+
+/* CSS for the arrow container */
+.arrow-container {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    /* Adjust to move closer to the center */
+    transform: translateY(-50%);
+    font-size: 32px;
+    z-index: 9999;
+}
+
+/* Style for the arrow icon */
+.arrow-container a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the arrow icon */
+.arrow-container a:hover {
+    color: #FF6347;
+}
+
+.dark-mode .arrow-container a {
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the arrow icon in dark mode */
+.dark-mode .arrow-container a:hover {
+    color: wheat;
