@@ -61,3 +61,77 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// JavaScript code for chapter functions
+document.addEventListener("DOMContentLoaded", function() {
+    const nextChapterBtn = document.getElementById("nextChapterBtn");
+    const backToChapterBtn = document.getElementById("backToChapterBtn");
+    const backArrowContainer = document.getElementById("backArrowContainer");
+
+    // Add click event listener to the forward arrow button
+    nextChapterBtn.addEventListener("click", function(event) {
+        // Prevent default behavior of anchor link
+        event.preventDefault();
+
+        const currentChapter = getCurrentChapter();
+        const nextChapter = getNextChapter(currentChapter);
+
+        if (nextChapter) {
+            toggleChapter(currentChapter, nextChapter);
+            updateArrowVisibility(nextChapter);
+        }
+    });
+
+    // Add click event listener to the back arrow button
+    backToChapterBtn.addEventListener("click", function(event) {
+        // Prevent default behavior of anchor link
+        event.preventDefault();
+
+        const currentChapter = getCurrentChapter();
+        const previousChapter = getPreviousChapter(currentChapter);
+
+        if (previousChapter) {
+            toggleChapter(currentChapter, previousChapter);
+            updateArrowVisibility(previousChapter);
+        }
+    });
+
+    // Function to get the currently visible chapter
+    function getCurrentChapter() {
+        return document.querySelector(".chapter-container:not(.hidden)");
+    }
+
+    // Function to get the next chapter based on the current chapter
+    function getNextChapter(currentChapter) {
+        return currentChapter.nextElementSibling;
+    }
+
+    // Function to get the previous chapter based on the current chapter
+    function getPreviousChapter(currentChapter) {
+        return currentChapter.previousElementSibling;
+    }
+
+    // Function to toggle visibility between two chapters
+    function toggleChapter(currentChapter, nextChapter) {
+        currentChapter.classList.add("hidden");
+        nextChapter.classList.remove("hidden");
+    }
+
+    // Function to update arrow visibility based on the current chapter
+    function updateArrowVisibility(currentChapter) {
+        const nextChapter = getNextChapter(currentChapter);
+        const previousChapter = getPreviousChapter(currentChapter);
+
+        if (nextChapter) {
+            nextChapterBtn.classList.remove("hidden");
+        } else {
+            nextChapterBtn.classList.add("hidden");
+        }
+
+        if (previousChapter) {
+            backArrowContainer.classList.remove("hidden");
+        } else {
+            backArrowContainer.classList.add("hidden");
+        }
+    }
+});
