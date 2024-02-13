@@ -136,8 +136,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: var(--orange);
-    /* Darker orange background on hover */
+    background-color: var(--hover-light);
+    /* Orange background on hover */
 }
 
 /* Tagline */
@@ -160,6 +160,7 @@ nav ul li a:hover {
     /* Adjust the position to the bottom left */
 }
 
+/* Top Right Menu Button */
 .menu-btn {
     position: fixed;
     top: 20px;
@@ -173,11 +174,11 @@ nav ul li a:hover {
 }
 
 .menu-btn:hover .icon {
-    color: var(--orange);
+    color: var(--hover-light);
 }
 
 .dark-mode .menu-btn:hover .icon {
-    color: wheat;
+    color: var(--hover-dark);
 }
 
 /* Sidebar */
@@ -221,7 +222,7 @@ nav ul li a:hover {
 
 .sidebar ul li a {
     text-decoration: none;
-    color: var(--text-color-light);
+    color: var(--text-light);
     /* Orange text color for links in light mode */
     transition: color 0.3s ease;
     /* Smooth transition for text color */
@@ -238,12 +239,12 @@ nav ul li a:hover {
 }
 
 .dark-mode .sidebar ul li a {
-    color: #fff;
+    color: var(--dark-text);
     /* White text color for links in dark mode */
 }
 
 .dark-mode .sidebar ul li a:hover {
-    color: wheat;
+    color: var(--hover-dark);
     /* Wheat color when hovered in dark mode */
 }
 
@@ -284,9 +285,9 @@ nav ul li a:hover {
 }
 
 .dark-mode nav ul li a {
-    color: #fff;
+    color: var(--dark-text);
     /* White text color for buttons in dark mode */
-    background-color: #333;
+    background-color: var(--dark-bg);
     /* Dark background for buttons in dark mode */
     box-shadow: none;
     /* Remove shadow from buttons in dark mode */
@@ -339,7 +340,7 @@ nav ul li a:hover {
 }
 
 .back-btn .icon {
-    color: #333;
+    color: var(--light-text);
     /* Adjust color as needed */
 }
 
@@ -349,7 +350,7 @@ nav ul li a:hover {
 }
 
 .dark-mode .back-btn .icon {
-    color: #fff;
+    color: var(--dark-text);
     /* White color in dark mode */
 }
 
@@ -368,18 +369,18 @@ nav ul li a:hover {
     cursor: pointer;
     font-size: 24px;
     outline: none;
-    color: #333;
-    /* Dark text color */
+    color: var(--light-text);
+    /* Dark text color in light mode */
 }
 
 /* Style for the play button icon on hover */
 .play-button:hover i {
-    color: var(--orange);
+    color: var(--hover-light);
     /* Adjust hover color as needed */
 }
 
 .dark-mode .play-button {
-    color: #fff;
+    color: var(--dark-text);
     /* White color in dark mode */
 }
 
@@ -430,7 +431,7 @@ nav ul li a:hover {
 /* Style for the arrow icon */
 .arrow-container a,
 .back-arrow-container a {
-    color: #000;
+    color: var(--light-text);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -438,12 +439,12 @@ nav ul li a:hover {
 /* Hover effect for the arrow icon */
 .arrow-container a:hover,
 .back-arrow-container a:hover {
-    color: var(--orange);
+    color: var(--hover-light);
 }
 
 .dark-mode .arrow-container a,
 .dark-mode .back-arrow-container a {
-    color: #FFF;
+    color: var(--dark-text);
     text-decoration: none;
     transition: color 0.3s ease;
 }
