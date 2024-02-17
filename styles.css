@@ -411,8 +411,8 @@ nav ul li a:hover {
 /* CSS for the arrow container */
 .arrow-container {
     position: fixed;
-    bottom: 10px;
-    right: 20px;
+    bottom: 375px;
+    right: 260px;
     font-size: 32px;
     z-index: 9999;
 }
