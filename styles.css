@@ -38,6 +38,14 @@ body {
     margin: 0;
 }
 
+#wrapper {
+    display: grid;
+    grid-template-columns: auto minmax(80%,600px) auto;
+    place-items: center;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
 /* Container */
 .container {
     background-color: var(--light-bg);
@@ -50,6 +58,8 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     position: relative;
     margin: 0 auto;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .image-container {
@@ -280,6 +290,7 @@ nav ul li a:hover {
     padding: 20px;
     width: 80%;
     max-width: 600px;
+    /* width: 600px; */
     /* Adjust as needed */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -410,22 +421,18 @@ nav ul li a:hover {
 
 /* CSS for the arrow container */
 .arrow-container {
-    position: fixed;
-    bottom: 375px;
-    right: 260px;
     font-size: 32px;
-    z-index: 9999;
+    grid-column: 3;
+    grid-row: 1;
 }
 
 /* Add styles for the back arrow */
 .back-arrow-container {
-    position: absolute;
-    top: 50%;
-    left: -60px;
     /* Adjust as needed */
     transform: translateY(-50%);
     font-size: 32px;
-    z-index: 9999;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 /* Style for the arrow icon */
