@@ -1,468 +1,469 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 /* Colors */
 :root {
-    --light-bg: #fff;
-    --dark-bg: #333;
-    --light-text: #333;
-    --dark-text: #fff;
-    --orange: #FF6347;
-    --sidebar-bg: rgba(0, 0, 0, 0.8);
-    --sidebar-hover: #FF6347;
-    --menu-btn-hover: #FF6347;
-    --back-btn-hover: #FF6347;
-    --back-btn-dark: wheat;
-    --hover-light: #FF6347;
-    --hover-dark: wheat;
+  --light-bg: #fff;
+  --dark-bg: #333;
+  --light-text: #333;
+  --dark-text: #fff;
+  --accent-dark-text: wheat;
+  --orange: #ff6347;
+  --hover-light: #ff6347;
+  --hover-dark: wheat;
 }
 
 /* Body */
 body {
-    font-family: 'Roboto', sans-serif;
-    /* Use custom font for all text */
-    text-align: center;
-    /* Center-align all content */
-    color: var(--light-text);
-    /* Dark text color */
-    display: flex;
-    /* Use flexbox layout */
-    flex-direction: column;
-    /* Stack child elements vertically */
-    justify-content: center;
-    /* Align child elements vertically */
-    align-items: center;
-    /* Align child elements horizontally */
-    min-height: 100vh;
-    /* Ensure full viewport height */
-    margin: 0;
+  font-family: "Roboto", sans-serif;
+  /* Use custom font for all text */
+  text-align: center;
+  /* Center-align all content */
+  color: var(--light-text);
+  /* Dark text color */
+  display: flex;
+  /* Use flexbox layout */
+  flex-direction: column;
+  /* Stack child elements vertically */
+  justify-content: center;
+  /* Align child elements vertically */
+  align-items: center;
+  /* Align child elements horizontally */
+  min-height: 100vh;
+  /* Ensure full viewport height */
+  margin: 0;
 }
 
 #wrapper {
-    display: grid;
-    grid-template-columns: auto minmax(80%,600px) auto;
-    place-items: center;
-    box-sizing: border-box;
-    padding: 0 1rem;
+  display: grid;
+  grid-template-columns: auto minmax(80%, 600px) auto;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 0 1rem;
 }
 
 /* Container */
 .container {
-    background-color: var(--light-bg);
-    /* White background in light mode */
-    border-radius: 20px;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    /* Adjust as needed */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    margin: 0 auto;
-    grid-column: 2;
-    grid-row: 1;
+  background-color: var(--light-bg);
+  /* White background in light mode */
+  border-radius: 20px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  /* Adjust as needed */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 0 auto;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .image-container {
-    text-align: center;
+  text-align: center;
 }
 
 .centered-image {
-    max-width: 80%;
-    /* Adjust as needed */
-    max-height: 70vh;
-    /* Adjust as needed */
-    border-radius: 20px;
-    /* Add rounded corners */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-    /* Add shadow for depth */
-    backdrop-filter: blur(10px);
-    /* Apply blur effect for glassmorphic style */
+  max-width: 80%;
+  /* Adjust as needed */
+  max-height: 70vh;
+  /* Adjust as needed */
+  border-radius: 20px;
+  /* Add rounded corners */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  /* Add shadow for depth */
+  backdrop-filter: blur(10px);
+  /* Apply blur effect for glassmorphic style */
 }
 
 header h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: var(--light-text);
-    /* Black text color in light mode */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    /* Shadow with offset for neubrutal style */
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--light-text);
+  /* Black text color in light mode */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  /* Shadow with offset for neubrutal style */
+}
+
+.dark-mode h3 {
+  color: var(--accent-dark-text);
+}
+
+h3 {
+  color: var(--orange);
 }
 
 header img {
-    display: block;
-    margin: 0 auto 20px;
-    /* Center the image and add space at the bottom */
-    border-radius: 50%;
-    /* Make the image round */
-    max-width: 150px;
-    /* Adjust as needed */
-    border: 2px solid var(--light-text);
-    /* Set border color to wheat */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-    /* Add shadow for neubrutal style */
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    /* Add transition effect for transform and border color */
+  display: block;
+  margin: 0 auto 20px;
+  /* Center the image and add space at the bottom */
+  border-radius: 50%;
+  /* Make the image round */
+  max-width: 150px;
+  /* Adjust as needed */
+  border: 2px solid var(--light-text);
+  /* Set border color to wheat */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  /* Add shadow for neubrutal style */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  /* Add transition effect for transform and border color */
 }
 
 .dark-mode header img {
-    border-color: var(--hover-dark);
-    /* Set border color to wheat in dark mode */
+  border-color: var(--hover-dark);
+  /* Set border color to wheat in dark mode */
 }
 
-
 header img:hover {
-    transform: scale(1.1);
-    /* Scale up the image on hover */
+  transform: scale(1.1);
+  /* Scale up the image on hover */
 }
 
 /* Navigation */
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    /* Center the navigation links */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  /* Center the navigation links */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+  display: inline;
+  margin: 0 10px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: var(--light-text);
-    /* Dark text color by default */
-    padding: 12px 24px;
-    /* Larger padding for buttons */
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    /* Shadow with offset */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    /* Smooth transition for background color and text color */
-    background-color: var(--light-bg);
-    /* White background for buttons */
+  text-decoration: none;
+  color: var(--light-text);
+  /* Dark text color by default */
+  padding: 12px 24px;
+  /* Larger padding for buttons */
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  /* Shadow with offset */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Smooth transition for background color and text color */
+  background-color: var(--light-bg);
+  /* White background for buttons */
 }
 
 nav ul li a:hover {
-    background-color: var(--hover-light);
-    /* Orange background on hover */
+  background-color: var(--hover-light);
+  /* Orange background on hover */
 }
 
 /* Tagline */
 .tagline {
-    font-family: 'Roboto', sans-serif;
-    /* Use custom font for tagline */
-    font-size: 18px;
-    /* Adjust as needed */
-    color: var(--light-text);
-    /* Dark text color */
-    margin-bottom: 40px;
-    /* Increase margin-bottom for more padding */
+  font-family: "Roboto", sans-serif;
+  /* Use custom font for tagline */
+  font-size: 18px;
+  /* Adjust as needed */
+  color: var(--light-text);
+  /* Dark text color */
+  margin-bottom: 40px;
+  /* Increase margin-bottom for more padding */
 }
 
 /* Dark/light toggle */
 .dark-light-toggle {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    /* Adjust the position to the bottom left */
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  /* Adjust the position to the bottom left */
 }
 
 /* Top Right Menu Button */
 .menu-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    outline: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  outline: none;
 }
 
 .menu-btn:hover .icon {
-    color: var(--hover-light);
+  color: var(--hover-light);
 }
 
 .dark-mode .menu-btn:hover .icon {
-    color: var(--hover-dark);
+  color: var(--hover-dark);
 }
 
 /* Sidebar */
 .sidebar {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background: rgba(255,
-        255,
-        255,
-        0.9);
-    /* Light mode sidebar background with glassmorphic style */
-    z-index: 999;
-    transition: .3s ease-in-out;
-    padding-top: 60px;
-    border-top-left-radius: 20px;
-    /* Add rounded corners to top left */
-    border-bottom-left-radius: 20px;
-    /* Add rounded corners to bottom left */
-    backdrop-filter: blur(5px);
-    /* Apply blur effect for glassmorphic style */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    /* Add shadow for depth */
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  /* Light mode sidebar background with glassmorphic style */
+  z-index: 999;
+  transition: 0.3s ease-in-out;
+  padding-top: 60px;
+  border-top-left-radius: 20px;
+  /* Add rounded corners to top left */
+  border-bottom-left-radius: 20px;
+  /* Add rounded corners to bottom left */
+  backdrop-filter: blur(5px);
+  /* Apply blur effect for glassmorphic style */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  /* Add shadow for depth */
 }
 
 .sidebar:hover {
-    background: rgba(255, 255, 255, 0.95);
-    /* Lighter background color on hover for glassmorphic effect */
+  background: rgba(255, 255, 255, 0.95);
+  /* Lighter background color on hover for glassmorphic effect */
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .sidebar ul li {
-    padding: 15px;
+  padding: 15px;
 }
 
 .sidebar ul li a {
-    text-decoration: none;
-    color: var(--text-light);
-    /* Orange text color for links in light mode */
-    transition: color 0.3s ease;
-    /* Smooth transition for text color */
+  text-decoration: none;
+  color: var(--text-light);
+  /* Orange text color for links in light mode */
+  transition: color 0.3s ease;
+  /* Smooth transition for text color */
 }
 
 .sidebar ul li a:hover {
-    color: var(--hover-light);
-    /* Brighter orange color when hovered in light mode */
+  color: var(--hover-light);
+  /* Brighter orange color when hovered in light mode */
 }
 
 .dark-mode .sidebar {
-    background: linear-gradient(135deg, #333, #111);
-    /* Dark mode sidebar background color */
+  background: linear-gradient(135deg, #333, #111);
+  /* Dark mode sidebar background color */
 }
 
 .dark-mode .sidebar ul li a {
-    color: var(--dark-text);
-    /* White text color for links in dark mode */
+  color: var(--dark-text);
+  /* White text color for links in dark mode */
 }
 
 .dark-mode .sidebar ul li a:hover {
-    color: var(--hover-dark);
-    /* Wheat color when hovered in dark mode */
+  color: var(--hover-dark);
+  /* Wheat color when hovered in dark mode */
 }
 
 .show-sidebar {
-    right: 0;
-    transition: .8s;
+  right: 0;
+  transition: 0.8s;
 }
-
-.toggle-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    outline: none;
-}
-
 
 .dark-mode #toggleIcon {
-    color: wheat;
+  color: var(--dark-text);
+}
+
+.dark-mode #toggleIcon a:hover {
+  color: var(--hover-light);
 }
 
 .dark-mode {
-    background: linear-gradient(135deg, #333, #111);
-    /* Dark mode background gradient */
-    color: #fff;
-    /* Light text color */
+  background: linear-gradient(135deg, #333, #111);
+  /* Dark mode background gradient */
+  color: #fff;
+  /* Light text color */
 }
 
 .dark-mode .container {
-    background: linear-gradient(135deg, #333, #111);
-    /* Dark mode background gradient */
-    border-radius: 20px;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    /* width: 600px; */
-    /* Adjust as needed */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #333, #111);
+  /* Dark mode background gradient */
+  border-radius: 20px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  /* width: 600px; */
+  /* Adjust as needed */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .dark-mode nav ul li a {
-    color: var(--dark-text);
-    /* White text color for buttons in dark mode */
-    background-color: var(--dark-bg);
-    /* Dark background for buttons in dark mode */
-    box-shadow: none;
-    /* Remove shadow from buttons in dark mode */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    /* Smooth transition for background color and text color */
+  color: var(--dark-text);
+  /* White text color for buttons in dark mode */
+  background-color: var(--dark-bg);
+  /* Dark background for buttons in dark mode */
+  box-shadow: none;
+  /* Remove shadow from buttons in dark mode */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Smooth transition for background color and text color */
 }
 
 .dark-mode nav ul li a:hover {
-    background-color: var(--hover-dark);
-    color: black;
-    /* White text color on hover in dark mode */
+  background-color: var(--hover-dark);
+  color: black;
+  /* White text color on hover in dark mode */
 }
 
 .dark-mode header h1,
 .dark-mode .tagline {
-    color: #f5deb3;
-    /* White text color for title and tagline in dark mode */
+  color: #f5deb3;
+  /* White text color for title and tagline in dark mode */
 }
 
 .toggle-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  outline: none;
 }
 
 .toggle-btn:hover .icon .fa-sun:before {
-    color: var(--hover-light);
+  color: var(--hover-light);
 }
 
 .dark-mode .toggle-btn:hover .icon .fa-sun:before {
-    color: var(--hover-dark);
+  color: var(--hover-dark);
 }
 
 #toggleIcon {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .back-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 9999;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    outline: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  outline: none;
 }
 
 .back-btn .icon {
-    color: var(--light-text);
-    /* Adjust color as needed */
+  color: var(--light-text);
+  /* Adjust color as needed */
 }
 
 .back-btn:hover .icon {
-    color: var(--hover-light);
-    /* Adjust hover color as needed */
+  color: var(--hover-light);
+  /* Adjust hover color as needed */
 }
 
 .dark-mode .back-btn .icon {
-    color: var(--dark-text);
-    /* White color in dark mode */
+  color: var(--dark-text);
+  /* White color in dark mode */
 }
 
 .dark-mode .back-btn:hover .icon {
-    color: var(--hover-dark);
-    /* Wheat color in dark mode */
+  color: var(--hover-dark);
+  /* Wheat color in dark mode */
 }
 
 .play-button {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 9999;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    outline: none;
-    color: var(--light-text);
-    /* Dark text color in light mode */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  outline: none;
+  color: var(--light-text);
+  /* Dark text color in light mode */
 }
 
 /* Style for the play button icon on hover */
 .play-button:hover i {
-    color: var(--hover-light);
-    /* Adjust hover color as needed */
+  color: var(--hover-light);
+  /* Adjust hover color as needed */
 }
 
 .dark-mode .play-button {
-    color: var(--dark-text);
-    /* White color in dark mode */
+  color: var(--dark-text);
+  /* White color in dark mode */
 }
 
 .dark-mode .play-button:hover i {
-    color: var(--hover-dark);
-    /* Wheat color in dark mode */
+  color: var(--hover-dark);
+  /* Wheat color in dark mode */
 }
 
 /* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-        max-width: none;
-    }
+  .container {
+    width: 90%;
+    max-width: none;
+  }
 
-    header h1 {
-        font-size: 24px;
-        /* Decrease font size for smaller screens */
-    }
+  header h1 {
+    font-size: 24px;
+    /* Decrease font size for smaller screens */
+  }
 
-    nav ul li {
-        margin: 5px 0;
-        /* Adjust margins for navigation links */
-    }
-
+  nav ul li {
+    margin: 5px 0;
+    /* Adjust margins for navigation links */
+  }
 }
 
 /* CSS for the arrow container */
 .arrow-container {
-    font-size: 32px;
-    grid-column: 3;
-    grid-row: 1;
+  font-size: 32px;
+  grid-column: 3;
+  grid-row: 1;
 }
 
 /* Add styles for the back arrow */
 .back-arrow-container {
-    /* Adjust as needed */
-    transform: translateY(-50%);
-    font-size: 32px;
-    grid-column: 1;
-    grid-row: 1;
+  /* Adjust as needed */
+  transform: translateY(-50%);
+  font-size: 32px;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 /* Style for the arrow icon */
 .arrow-container a,
 .back-arrow-container a {
-    color: var(--light-text);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: var(--light-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 /* Hover effect for the arrow icon */
 .arrow-container a:hover,
 .back-arrow-container a:hover {
-    color: var(--hover-light);
+  color: var(--hover-light);
 }
 
 .dark-mode .arrow-container a,
 .dark-mode .back-arrow-container a {
-    color: var(--dark-text);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: var(--dark-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 /* Hover effect for the arrow icon in dark mode */
 .dark-mode .arrow-container a:hover,
 .dark-mode .back-arrow-container a:hover {
-    color: var(--hover-dark);
+  color: var(--hover-dark);
 }
 
 /* Hide chapter by default */
 .hidden {
-    display: none;
+  display: none;
+}
+/* Left Align Chapter Content */
+.chapter-content {
+  text-align: left;
+  font-size: medium;
+  font-style: italic;
+  line-height: 25px;
 }
