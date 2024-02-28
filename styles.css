@@ -423,7 +423,6 @@ nav ul li a:hover {
 /* Add styles for the back arrow */
 .back-arrow-container {
   /* Adjust as needed */
-  transform: translateY(-50%);
   font-size: 32px;
   grid-column: 1;
   grid-row: 1;
