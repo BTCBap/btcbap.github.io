@@ -1,7 +1,10 @@
-# Portfolio-Site
+# justsaybits.org Next.js Site
 
-Sup world.
+This repo contains a minimal Next.js implementation of the justsaybits.org website. It uses Tailwind CSS with DaisyUI components and Framer Motion for subtle animations. All original colors, layout, and functionality like dark mode, drawer navigation, and the music player are preserved.
 
-If you're reading this, you're the best.
+## Development
 
-This is a portfolio site of my work. It's a **work**-in-progress.
+```bash
+npm install
+npm run dev
+```
